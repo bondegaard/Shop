@@ -1,0 +1,61 @@
+name: Vagt
+version: '1.2.1'
+main: com.bondegaard.vagt.Main
+description: "VagtSystem lavet af Bondegaard"
+depend: [Vault]
+softdepend:
+  - GroupManager
+  - LuckPerms
+authors:
+  - Bondegaard
+permissions:
+  vagt.*:
+    default: op
+    children:
+      - vagt.admin
+      - vagt.default
+  vagt.admin:
+    default: false
+    children:
+      - vagt.vagt
+      - vagt.vagtkiste
+      - vagt.vagtchat.use
+      - vagt.ransagning
+      - vagt.jail.use
+      - vagt.jail.admin
+      - vagt.kaution.use
+  vagt.default:
+    default: false
+    children:
+      - vagt.vagt
+      - vagt.vagtchat.use
+      - vagt.jail.use
+      - vagt.kaution.use
+commands:
+  vagtadmin:
+    usage: "/vagtadmin <argument>"
+  vagt:
+    permission: "vagt.vagt"
+    usage: "/vagt"
+  vagtkiste:
+    permission: "vagt.vagtkiste"
+    usage: "/vagtkiste"
+  vagtchat:
+    permission: "vagt.vagtchat.use"
+    aliases: [vc]
+    usage: "/vagtchat"
+  ransagning:
+    permission: "vagt.ransagning"
+    usage: "/ransagning"
+  jail:
+    permission: "vagt.jail.use"
+    usage: "/Jail <Spiller> <Grund>"
+    aliases: [ej]
+  adminjail:
+    permission: "vagt.jail.admin"
+    usage: "/AdminJail <Spiller> <Grund>"
+    aliases: [aej]
+  kaution:
+    permission: "vagt.kaution.use"
+    usage: "/kaution"
+    aliases: [k]

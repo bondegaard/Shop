@@ -1,0 +1,54 @@
+#	―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+#	███╗░░░███╗░█████╗░░██████╗███████╗████████╗██╗░░░██╗██████╗░░██████╗
+#	████╗░████║██╔══██╗██╔════╝██╔════╝╚══██╔══╝██║░░░██║██╔══██╗██╔════╝
+#	██╔████╔██║██║░░╚═╝╚█████╗░█████╗░░░░░██║░░░██║░░░██║██████╔╝╚█████╗░
+#	██║╚██╔╝██║██║░░██╗░╚═══██╗██╔══╝░░░░░██║░░░██║░░░██║██╔═══╝░░╚═══██╗
+#	██║░╚═╝░██║╚█████╔╝██████╔╝███████╗░░░██║░░░╚██████╔╝██║░░░░░██████╔╝
+#	╚═╝░░░░░╚═╝░╚════╝░╚═════╝░╚══════╝░░░╚═╝░░░░╚═════╝░╚═╝░░░░░╚═════╝░
+#
+#	┃ ● Velkommen til McSetups - Kunde
+#
+#	┃ McSetups er et dansk minecraft server market, hvor du
+#	┃ kan købe alt du skal bruge til DIN mincraft server.
+#	┃ På McSetups har du mulighed for at alt fra maps til custom plugins.
+#
+#	➡ https://mcsetups.dk/
+#	➡ https://butik.mcsetups.dk/
+#	➡ https://discord.mcsetups.dk/
+#	➡ https://developer.mcsetups.dk/
+#	―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+#
+#	┃ ● Tak for køb vores - Shop System.
+#
+#	┃ For at få den bedste oplevelse af dit plugin, skal du bare følge disse steps ⬇
+#	┃ 1 » Start med at paste din licens ind unde kategorien License "License".
+#	┃ 2 » Gå ind i config filerne, og opsæt dem så de passer til din server.
+#	┃ 3 » Start din server, og nyd dit custom plugin fra McSetups.dk
+#	┃ ( Hvis fejl opstår, kan du kontake vores udvikler team for hjælp til fejlen )
+#
+#	➡ Tak for dit køb, af vores ( Shop System )
+#	―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+#	┃ PLUGIN - UDVIKLER
+#	┃ ● Bondegaard
+#	┃ ➡ bondegaard@mcsetups.dk
+#
+#	                  Copyright McSetups 2022 ©
+#	―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
+
+#┃ Indsæt din licens her
+license: "INDSÆT-HER"
+
+
+database:
+  # Types: H2, MariaDB
+  # Default: H2
+  type: "h2"
+  h2:
+    driver: "jdbc:h2:-/shop"
+  mariadb:
+    driver: "jdbc:mariadb://{HOST}:{PORT}/{DATABASE}?connectTimeout=0&socketTimeout=0&autoReconnect=true"
+    host: ""
+    database: ""
+    username: ""
+    password: ""
+    port: 3306
